@@ -93,7 +93,8 @@ const convertFromMilesToOtherMeasurements=(value)=>{
   return (
     <>
     
-    <div className="converter-container">
+   <div className='converter-container'>
+   <div className="converter-content">
         <h2>Type Number To Convert it</h2>
         
         <div className='Feet'>
@@ -103,7 +104,7 @@ const convertFromMilesToOtherMeasurements=(value)=>{
             onKeyUp={()=>convertFromFeetToOtherMeasurements(feetValue)} />
        </div>
 
-        <div className='Meters'>
+        <div className='Meters '>
             <label>Meters</label>
             <input type="number" placeholder='Meters' 
             value={metersValue} onChange={(e)=>setMetersValue(e.target.value)}
@@ -146,6 +147,7 @@ const convertFromMilesToOtherMeasurements=(value)=>{
         </div>
     </div>
     
+   </div>
     </>
   )
 }

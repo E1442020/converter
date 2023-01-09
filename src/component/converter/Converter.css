@@ -1,6 +1,10 @@
 .converter-container {
   color: aliceblue;
-  margin-top: 100px;
+  width: 40%;
+  margin: 0 auto;
+  padding-top: 20px;
+  
+  
   
 }
 
@@ -21,7 +25,7 @@
 }
 input {
   padding: 10px;
-  width: 400px;
+  /* width: 400px; */
   background-color: rgb(63, 63, 63);
   border: none;
   font-size: 15px;
@@ -34,3 +38,9 @@ input::placeholder {
   color: rgb(206, 204, 204);
 }
 
+@media screen  and (max-width:940px){
+  .converter-container{
+    width: 90%;
+  }
+  
+}
