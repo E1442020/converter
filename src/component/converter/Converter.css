@@ -1,15 +1,9 @@
 .converter-container {
-  height: 100vh;
-  width: 100vw;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
   color: aliceblue;
-  margin: 50px 0px;
+  margin-top: 100px;
   
 }
+
  
 .Feet,
 .Meters,
@@ -21,12 +15,13 @@
   display: flex;
   flex-direction: column;
   color: white;
-  width: 450px;
   font-size: 17px;
   gap: 4px;
+  margin-bottom: 20px;
 }
 input {
   padding: 10px;
+  width: 400px;
   background-color: rgb(63, 63, 63);
   border: none;
   font-size: 15px;
@@ -39,13 +34,3 @@ input::placeholder {
   color: rgb(206, 204, 204);
 }
 
-@media screen  and (max-width:940px){
-  .converter-container{
-    width: 100%;
-    /* display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; */
-  }
-  
-}
