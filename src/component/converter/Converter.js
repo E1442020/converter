@@ -2,16 +2,18 @@ import React, { useState } from 'react';
 import './Converter.css';
 
 export default function Converter() {
-    const [feetValue,setFeetValue]=useState();
-    const [metersValue,setMetersValue]=useState();
-    const [inchesValue,setInchesValue]=useState();
-    const [cmValue,setCmValue]=useState();
-    const [yardsValue,setYardsValue]=useState();
-    const [kilometersValue,setKilometersValue]=useState();
-    const [milesValue,setMilesValue]=useState();
+    const [feetValue,setFeetValue]=useState('');
+    const [metersValue,setMetersValue]=useState('');
+    const [inchesValue,setInchesValue]=useState('');
+    const [cmValue,setCmValue]=useState('');
+    const [yardsValue,setYardsValue]=useState('');
+    const [kilometersValue,setKilometersValue]=useState('');
+    const [milesValue,setMilesValue]=useState('');
     
 
     const convertAllMeasurementsToMeter=(value)=>{
+       
+        
         if(value==metersValue){value=value}
         else if(value==feetValue){value=value/3.2808}
         else if(value==inchesValue){value=value/39.370 }
@@ -25,6 +27,15 @@ export default function Converter() {
        
     
     const convertFromMetersToOtherMeasurements=(value)=>{
+        if(value===0){
+            setMetersValue('')
+            setFeetValue('')
+            setInchesValue('')
+            setCmValue('')
+            setYardsValue('')
+            setKilometersValue('')
+            setMilesValue('')
+        }else{
         setFeetValue(Math.round(value*3.2808 * 100) / 100);
         setMetersValue(Math.round(value*100) / 100);
         setInchesValue(Math.round(value*39.370* 100) / 100);
@@ -34,7 +45,7 @@ export default function Converter() {
        setMilesValue(Math.round(value*0.00062137 * 100000) / 100000);
 
     
-    }
+    }}
 
 
 
